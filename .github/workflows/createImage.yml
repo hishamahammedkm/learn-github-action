@@ -52,6 +52,6 @@ jobs:
       - name: Restart Docker Compose
         run: |
           cd /home/ubuntu/samskara/test
-          docker-compose down
+          docker compose down
           docker image rm hishamahammedkm/samskara-sever -f
-          docker-compose up -d
+          docker compose up -d
