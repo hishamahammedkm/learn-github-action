@@ -7,6 +7,7 @@ on:
 
 jobs:
   docker:
+
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
@@ -23,3 +24,9 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/github-action-tst:latest
+  deploy:
+    runs-on: self-hosted
+    steps:
+        - name: Checkout code
+          run: cd command
+
