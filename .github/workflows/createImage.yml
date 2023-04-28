@@ -3,7 +3,7 @@ name: createDockerImage
 on:
   push:
     branches:
-      - "production"
+      - "main"
 
 jobs:
   docker:
